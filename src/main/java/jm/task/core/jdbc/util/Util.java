@@ -6,8 +6,8 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
+import org.hibernate.service.ServiceRegistry;
 
-import javax.imageio.spi.ServiceRegistry;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -46,9 +46,13 @@ public static SessionFactory getSessionFactory(){
     properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
     properties.put(Environment.SHOW_SQL, "true");
     properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
-    properties.put(Environment.HBM2DDL_AUTO, "create-drop");
     configuration.setProperties(properties);
+
+    configuration.addAnnotatedClass(User.class);
+
+
     SessionFactory sessionFactory = configuration.addAnnotatedClass(User.class).addProperties(configuration.getProperties()).buildSessionFactory();
+
     return sessionFactory;
 
 }
