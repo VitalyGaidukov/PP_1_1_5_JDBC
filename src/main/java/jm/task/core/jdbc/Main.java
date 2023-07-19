@@ -12,15 +12,15 @@ public static void main(String[] args) {
 
     UserService userDao = new UserServiceImpl();
 
-    userDao.createUsersTable();
-    userDao.createUsersTable();
+//    userDao.createUsersTable();
+//    userDao.createUsersTable();
+//
+//    userDao.saveUser("Igor", "Nemo", (byte) 20);
+//    userDao.saveUser("Petr", "Olegovna", (byte) 25);
+//    userDao.saveUser("Ivan", "Petrova", (byte) 31);
+//    userDao.saveUser("Marina", "Ivanova", (byte) 38);
 
-    userDao.saveUser("Igor", "Nemo", (byte) 20);
-    userDao.saveUser("Petr", "Olegovna", (byte) 25);
-    userDao.saveUser("Ivan", "Petrova", (byte) 31);
-    userDao.saveUser("Marina", "Ivanova", (byte) 38);
-
-    userDao.removeUserById(1);
+    //userDao.removeUserById(1);
     userDao.getAllUsers();
     userDao.cleanUsersTable();
     userDao.dropUsersTable();
