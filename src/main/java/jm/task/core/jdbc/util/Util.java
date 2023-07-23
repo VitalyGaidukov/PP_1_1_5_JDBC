@@ -11,6 +11,7 @@ import org.hibernate.service.ServiceRegistry;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Properties;
 
 public class Util {
@@ -31,11 +32,7 @@ public class Util {
         return connection;
     }
 
-//    public static SessionFactory getSessionFactory(){
-//        Configuration configuration = new Configuration().addAnnotatedClass(User.class);
-//        return configuration.buildSessionFactory();
-//
-//    }
+
 public static SessionFactory getSessionFactory(){
         Configuration configuration = new Configuration();
     Properties properties = new Properties();
