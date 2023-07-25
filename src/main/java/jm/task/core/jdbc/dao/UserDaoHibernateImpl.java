@@ -4,6 +4,7 @@ import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.util.Util;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 
 import javax.persistence.RollbackException;
 import java.util.Arrays;
@@ -69,9 +70,7 @@ public class UserDaoHibernateImpl implements UserDao {
         try (sessionFactory;
              session) {
             session.beginTransaction();
-            User user = new User();
-            user.setId(id);
-            session.delete(user);
+            session.createQuery("DELETE FROM User WHERE id = :id").setParameter("id", id);
             session.getTransaction().commit();
         }catch (IllegalStateException e){
             session.getTransaction().rollback();
