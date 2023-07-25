@@ -20,7 +20,7 @@ public static void main(String[] args) {
 //    userDao.saveUser("Ivan", "Petrova", (byte) 31);
 //    userDao.saveUser("Marina", "Ivanova", (byte) 38);
 
-    userDao.removeUserById(3);
+    userDao.removeUserById(3L);
 //    userDao.getAllUsers();
 //    userDao.cleanUsersTable();
 //    userDao.dropUsersTable();
