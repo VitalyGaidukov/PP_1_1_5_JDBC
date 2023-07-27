@@ -20,10 +20,10 @@ public static void main(String[] args) {
     userDao.saveUser("Ivan", "Petrova", (byte) 31);
     userDao.saveUser("Marina", "Ivanova", (byte) 38);
 
-//    userDao.removeUserById(5L);
-//    userDao.getAllUsers();
-//    userDao.cleanUsersTable();
-//    userDao.dropUsersTable();
+    userDao.removeUserById(5L);
+    userDao.getAllUsers();
+    userDao.cleanUsersTable();
+    userDao.dropUsersTable();
 
     // реализуйте алгоритм здесь
 }
