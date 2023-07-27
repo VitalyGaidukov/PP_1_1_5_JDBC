@@ -4,10 +4,8 @@ import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.util.Util;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
 
-import javax.persistence.RollbackException;
-import java.util.Arrays;
+
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
