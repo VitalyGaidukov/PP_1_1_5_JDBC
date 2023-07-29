@@ -32,7 +32,6 @@ public class Util {
         return connection;
     }
 
-
 public static SessionFactory getSessionFactory(){
         Configuration configuration = new Configuration();
     Properties properties = new Properties();
